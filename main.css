@@ -1,0 +1,712 @@
+/* line 1, scss/globals/_reset.scss */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'protogrotesk', sans-serif;
+}
+
+/* line 8, scss/globals/_reset.scss */
+ul {
+  list-style: none;
+}
+
+/* line 12, scss/globals/_reset.scss */
+a {
+  text-decoration: none;
+}
+
+/*
+	Copyright (C) Production Type
+	This software is the property of Production Type.
+	Your right to access and use this software is subject to the
+	applicable License Agreement, or Terms of Service, that exists
+	between you and Production Type. If no such agreement exists,
+	you may not access or use this software for any purpose.
+	This software may only be hosted at the locations specified in
+	the applicable License Agreement or Terms of Service, and only
+	for the purposes expressly set forth therein. You may not copy,
+	modify, convert, create derivative works from or distribute this
+	software in any way, or make it accessible to any third party,
+	without first obtaining the written permission of Production Type.
+	For more information, please visit us at www.productiontype.com
+*/
+@font-face {
+  font-family: 'protogrotesk';
+  src: url("fonts/protogroteskweb-light.eot");
+  src: url("fonts/protogroteskweb-light.eot?#iefix") format("embedded-opentype"), url("fonts/protogroteskweb-light.woff") format("woff");
+}
+@font-face {
+  font-family: 'protogrotesk';
+  src: url("fonts/protogroteskweb-bold.eot");
+  src: url("fonts/protogroteskweb-bold.eot?#iefix") format("embedded-opentype"), url("fonts/protogroteskweb-bold.woff") format("woff");
+  font-weight: bold;
+}
+/* line 31, scss/globals/_fonts.scss */
+* {
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 1, scss/blocks/_header.scss */
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  background-color: white;
+  width: 100%;
+  overflow: auto;
+  padding: 10px 20px 10px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+/* line 13, scss/blocks/_header.scss */
+.header__icon {
+  display: flex;
+}
+/* line 15, scss/blocks/_header.scss */
+.header__icon img {
+  width: 40px;
+}
+/* line 18, scss/blocks/_header.scss */
+.header__icon span {
+  font-weight: bold;
+  padding-top: 10px;
+  color: #8881F0;
+}
+/* line 27, scss/blocks/_header.scss */
+.header__links {
+  padding-top: 9px;
+}
+/* line 30, scss/blocks/_header.scss */
+.header__links a {
+  color: #FF5F05;
+  margin-left: 1em;
+}
+@media (min-width: 768px) {
+  /* line 30, scss/blocks/_header.scss */
+  .header__links a {
+    margin-left: 30px;
+  }
+}
+/* line 38, scss/blocks/_header.scss */
+.header__links a:hover {
+  color: #8881F0;
+}
+
+/* line 1, scss/blocks/_button.scss */
+.button {
+  width: 100%;
+  text-align: center;
+  border-width: 1px;
+  border-style: solid;
+  font-weight: bold;
+  padding: 15px 0 10px 0;
+  display: block;
+  cursor: pointer;
+}
+/* line 11, scss/blocks/_button.scss */
+.button:hover {
+  background: none;
+}
+
+/* line 5, scss/blocks/_checkbox.scss */
+.checkbox .checkbox__w.ticked {
+  opacity: 1;
+}
+
+/* line 1, scss/blocks/_signup.scss */
+.signup {
+  cursor: pointer;
+}
+
+/* line 1, scss/blocks/_form.scss */
+.form {
+  position: fixed;
+  background: #8881F0;
+  height: 100%;
+  width: 100%;
+  bottom: -100%;
+  opacity: 0;
+  z-index: 100;
+  transition: all 0.4s;
+}
+/* line 11, scss/blocks/_form.scss */
+.form.open {
+  bottom: 0;
+  opacity: 1;
+}
+/* line 19, scss/blocks/_form.scss */
+.form__container {
+  background: #EEEFF0;
+  padding: 20px;
+}
+@media (min-width: 768px) {
+  /* line 19, scss/blocks/_form.scss */
+  .form__container {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50%;
+    margin-left: 25%;
+  }
+}
+/* line 34, scss/blocks/_form.scss */
+.form div {
+  margin-bottom: 1em;
+}
+/* line 38, scss/blocks/_form.scss */
+.form input {
+  width: 100%;
+  font-size: 20px;
+  padding: 10px;
+}
+@media (min-width: 768px) {
+  /* line 38, scss/blocks/_form.scss */
+  .form input {
+    font-size: 20px;
+  }
+}
+/* line 48, scss/blocks/_form.scss */
+.form input[type="submit"] {
+  font-size: 20px;
+  padding: 10px;
+  background-color: #8881F0;
+  border-radius: 0;
+  border: 1px solid #8881F0;
+  color: #EEEFF0;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  /* line 48, scss/blocks/_form.scss */
+  .form input[type="submit"] {
+    font-size: 20px;
+  }
+}
+/* line 60, scss/blocks/_form.scss */
+.form input[type="submit"]:hover {
+  background-color: #EEEFF0;
+  color: #8881F0;
+}
+/* line 66, scss/blocks/_form.scss */
+.form__close {
+  color: #EEEFF0;
+  cursor: pointer;
+  text-align: center;
+  display: block;
+  position: relative;
+  bottom: -4em;
+}
+/* line 73, scss/blocks/_form.scss */
+.form__close:hover {
+  color: black;
+}
+
+/* line 1, scss/sections/_hero.scss */
+.hero {
+  height: 100vh;
+  background-color: #EEEFF0;
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+}
+@media (min-width: 768px) {
+  /* line 1, scss/sections/_hero.scss */
+  .hero {
+    flex-direction: row;
+  }
+}
+/* line 10, scss/sections/_hero.scss */
+.hero__left, .hero__right {
+  padding: 20px;
+  height: 50vh;
+}
+@media (min-width: 768px) {
+  /* line 10, scss/sections/_hero.scss */
+  .hero__left, .hero__right {
+    padding: 40px;
+  }
+}
+@media (min-width: 768px) {
+  /* line 10, scss/sections/_hero.scss */
+  .hero__left, .hero__right {
+    height: 100vh;
+    width: 50%;
+  }
+}
+/* line 26, scss/sections/_hero.scss */
+.hero__left {
+  background-size: cover;
+  background-position: center center;
+}
+/* line 34, scss/sections/_hero.scss */
+.hero__title {
+  position: relative;
+  top: 60%;
+  font-size: 23vw;
+  color: #8881F0;
+  letter-spacing: -0.04em;
+  transform: translateY(-50%);
+}
+@media (min-width: 768px) {
+  /* line 34, scss/sections/_hero.scss */
+  .hero__title {
+    top: 50%;
+    font-size: 12vw;
+  }
+}
+/* line 47, scss/sections/_hero.scss */
+.hero__caption {
+  position: absolute;
+  font-size: 20px;
+  color: #FF5F05;
+  line-height: 1;
+}
+/* line 53, scss/sections/_hero.scss */
+.hero__caption--top {
+  top: 80px;
+  background-color: #FF5F05;
+  color: #EEEFF0;
+  padding: 10px 10px 5px 10px;
+}
+@media (min-width: 768px) {
+  /* line 53, scss/sections/_hero.scss */
+  .hero__caption--top {
+    top: 80px;
+  }
+}
+/* line 63, scss/sections/_hero.scss */
+.hero__caption--bottom {
+  bottom: 52vh;
+}
+@media (min-width: 768px) {
+  /* line 63, scss/sections/_hero.scss */
+  .hero__caption--bottom {
+    bottom: 40px;
+  }
+}
+@media (min-width: 768px) {
+  /* line 47, scss/sections/_hero.scss */
+  .hero__caption {
+    font-size: 28px;
+  }
+}
+
+/* line 1, scss/sections/_butlers.scss */
+.butlers {
+  color: #EEEFF0;
+  font-size: 25px;
+  line-height: 1.1;
+  min-height: 100vh;
+}
+@media (min-width: 768px) {
+  /* line 1, scss/sections/_butlers.scss */
+  .butlers {
+    display: flex;
+    font-size: 40px;
+  }
+}
+/* line 12, scss/sections/_butlers.scss */
+.butlers__left, .butlers__right {
+  padding: 40px 20px 180px 20px;
+}
+@media (min-width: 768px) {
+  /* line 12, scss/sections/_butlers.scss */
+  .butlers__left, .butlers__right {
+    padding: 40px 40px 180px 40px;
+    width: 50%;
+  }
+}
+/* line 23, scss/sections/_butlers.scss */
+.butlers__left {
+  background-color: #8881F0;
+}
+/* line 27, scss/sections/_butlers.scss */
+.butlers__right {
+  background-color: #FF5F05;
+}
+/* line 29, scss/sections/_butlers.scss */
+.butlers__right svg {
+  margin-top: 10px;
+  max-width: 30px;
+}
+@media (min-width: 768px) {
+  /* line 29, scss/sections/_butlers.scss */
+  .butlers__right svg {
+    max-width: 43px;
+    margin-top: 0;
+  }
+}
+/* line 37, scss/sections/_butlers.scss */
+.butlers__right svg path {
+  fill: #EEEFF0;
+}
+/* line 43, scss/sections/_butlers.scss */
+.butlers__copy {
+  color: black;
+}
+/* line 46, scss/sections/_butlers.scss */
+.butlers__copy strong {
+  color: white;
+}
+/* line 51, scss/sections/_butlers.scss */
+.butlers__heading {
+  margin-bottom: 1em;
+}
+
+/* line 1, scss/sections/_pricing.scss */
+.pricing {
+  background-color: #EEEFF0;
+  color: black;
+  font-size: 20px;
+}
+@media (min-width: 768px) {
+  /* line 1, scss/sections/_pricing.scss */
+  .pricing {
+    display: flex;
+    font-size: 28px;
+  }
+}
+/* line 12, scss/sections/_pricing.scss */
+.pricing .pricing__copy {
+  padding: 80px 20px 180px 20px;
+}
+@media (min-width: 768px) {
+  /* line 12, scss/sections/_pricing.scss */
+  .pricing .pricing__copy {
+    width: 75%;
+    margin-left: 12.5%;
+  }
+}
+/* line 20, scss/sections/_pricing.scss */
+.pricing .pricing__copy strong, .pricing .pricing__copy i {
+  font-style: normal;
+  color: #8881F0;
+}
+/* line 25, scss/sections/_pricing.scss */
+.pricing .pricing__copy p, .pricing .pricing__copy ul {
+  margin-bottom: 1em;
+}
+/* line 32, scss/sections/_pricing.scss */
+.pricing__join {
+  margin: 2em 0;
+  background-color: #8881F0;
+  border-color: #8881F0;
+  color: #EEEFF0;
+}
+/* line 38, scss/sections/_pricing.scss */
+.pricing__join:hover {
+  color: #8881F0;
+}
+
+/* line 1, scss/sections/_illustrations.scss */
+.illustrations {
+  background-color: #8881F0;
+  color: #EEEFF0;
+  padding: 40px 20px 80px 20px;
+  font-size: 20px;
+}
+@media (min-width: 768px) {
+  /* line 1, scss/sections/_illustrations.scss */
+  .illustrations {
+    padding: 40px 40px 80px 40px;
+    font-size: 30px;
+    overflow: auto;
+  }
+}
+@media (min-width: 768px) {
+  /* line 13, scss/sections/_illustrations.scss */
+  .illustrations__item {
+    width: calc(50% - 10px);
+    float: left;
+  }
+  /* line 18, scss/sections/_illustrations.scss */
+  .illustrations__item:nth-of-type(odd) {
+    margin-right: 10px;
+  }
+  /* line 22, scss/sections/_illustrations.scss */
+  .illustrations__item:nth-of-type(even) {
+    margin-left: 10px;
+  }
+}
+/* line 28, scss/sections/_illustrations.scss */
+.illustrations__heading {
+  margin-bottom: 1em;
+}
+@media (min-width: 768px) {
+  /* line 28, scss/sections/_illustrations.scss */
+  .illustrations__heading {
+    width: 50%;
+  }
+}
+/* line 35, scss/sections/_illustrations.scss */
+.illustrations__image {
+  background-size: cover;
+  height: 90vw;
+}
+@media (min-width: 768px) {
+  /* line 35, scss/sections/_illustrations.scss */
+  .illustrations__image {
+    height: 47vw;
+  }
+}
+/* line 45, scss/sections/_illustrations.scss */
+.illustrations__caption {
+  margin: 0.5em 0 1em 0;
+}
+
+/* line 1, scss/sections/_quote.scss */
+.quote {
+  background-color: #EEEFF0;
+  color: #8881F0;
+  line-height: 1.1;
+  padding: 40px 20px 80px 20px;
+}
+@media (min-width: 768px) {
+  /* line 1, scss/sections/_quote.scss */
+  .quote {
+    padding: 80px 20px 180px 20px;
+  }
+}
+@media (min-width: 768px) {
+  /* line 12, scss/sections/_quote.scss */
+  .quote__text, .quote__attribute {
+    width: 75%;
+    margin-left: 12.5%;
+  }
+}
+/* line 20, scss/sections/_quote.scss */
+.quote__text {
+  font-size: 25px;
+  text-indent: -0.5em;
+}
+/* line 24, scss/sections/_quote.scss */
+.quote__text strong {
+  font-weight: bold;
+}
+@media (min-width: 768px) {
+  /* line 20, scss/sections/_quote.scss */
+  .quote__text {
+    font-size: 40px;
+  }
+}
+/* line 32, scss/sections/_quote.scss */
+.quote__attribute {
+  text-align: right;
+  font-size: 25px;
+  margin-top: 1em;
+}
+@media (min-width: 768px) {
+  /* line 32, scss/sections/_quote.scss */
+  .quote__attribute {
+    font-size: 40px;
+  }
+}
+
+/* line 1, scss/sections/_interlude.scss */
+.interlude {
+  background-color: #FF5F05;
+  color: #EEEFF0;
+  font-size: 20px;
+}
+@media (min-width: 768px) {
+  /* line 1, scss/sections/_interlude.scss */
+  .interlude {
+    font-size: 28px;
+    display: flex;
+    overflow: auto;
+  }
+}
+/* line 12, scss/sections/_interlude.scss */
+.interlude__left, .interlude__right {
+  padding: 40px 20px 20px 20px;
+}
+@media (min-width: 768px) {
+  /* line 12, scss/sections/_interlude.scss */
+  .interlude__left, .interlude__right {
+    padding: 40px 40px 80px 40px;
+    width: 50%;
+  }
+}
+/* line 22, scss/sections/_interlude.scss */
+.interlude__right {
+  text-align: center;
+}
+/* line 25, scss/sections/_interlude.scss */
+.interlude__right img {
+  max-width: 100%;
+}
+@media (min-width: 768px) {
+  /* line 25, scss/sections/_interlude.scss */
+  .interlude__right img {
+    max-height: 90vh;
+  }
+}
+/* line 35, scss/sections/_interlude.scss */
+.interlude__join {
+  margin-top: 2em;
+  background-color: #EEEFF0;
+  border-color: #EEEFF0;
+  color: #FF5F05;
+}
+@media (min-width: 768px) {
+  /* line 35, scss/sections/_interlude.scss */
+  .interlude__join {
+    margin-top: 8em;
+  }
+}
+/* line 45, scss/sections/_interlude.scss */
+.interlude__join:hover {
+  color: #EEEFF0;
+}
+
+/* line 1, scss/sections/_icons.scss */
+.icons {
+  background-color: #EEEFF0;
+  font-size: 20px;
+  color: black;
+  padding: 40px 20px 80px 20px;
+}
+@media (min-width: 768px) {
+  /* line 1, scss/sections/_icons.scss */
+  .icons {
+    font-size: 28px;
+    padding: 40px 40px 80px 40px;
+  }
+}
+@media (min-width: 768px) {
+  /* line 13, scss/sections/_icons.scss */
+  .icons__content {
+    margin-top: 50px;
+    padding-bottom: 50px;
+    width: 75%;
+    margin-left: 12.5%;
+  }
+}
+/* line 22, scss/sections/_icons.scss */
+.icons p {
+  margin-bottom: 1em;
+}
+/* line 25, scss/sections/_icons.scss */
+.icons p strong {
+  color: #8881F0;
+}
+@media (min-width: 768px) {
+  /* line 22, scss/sections/_icons.scss */
+  .icons p {
+    margin-top: 0;
+    width: 50%;
+    margin-left: 25%;
+  }
+}
+/* line 35, scss/sections/_icons.scss */
+.icons__heading {
+  margin-top: 4em;
+}
+@media (min-width: 768px) {
+  /* line 35, scss/sections/_icons.scss */
+  .icons__heading {
+    margin-top: 0em;
+  }
+}
+@media (min-width: 768px) {
+  /* line 44, scss/sections/_icons.scss */
+  .icons__items {
+    overflow: auto;
+  }
+}
+/* line 50, scss/sections/_icons.scss */
+.icons__item {
+  margin-bottom: 1em;
+  width: 100%;
+  font-size: 16px;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  /* line 50, scss/sections/_icons.scss */
+  .icons__item {
+    font-size: 20px;
+    width: calc(25% - 8px);
+    float: left;
+    margin-right: 10px;
+  }
+  /* line 63, scss/sections/_icons.scss */
+  .icons__item:nth-of-type(4n) {
+    margin-right: 0;
+  }
+}
+/* line 69, scss/sections/_icons.scss */
+.icons__join {
+  margin: 2em 0;
+  background-color: #8881F0;
+  border-color: #8881F0;
+  color: white;
+}
+@media (min-width: 768px) {
+  /* line 69, scss/sections/_icons.scss */
+  .icons__join {
+    width: 50%;
+    margin-left: 25%;
+  }
+}
+/* line 80, scss/sections/_icons.scss */
+.icons__join:hover {
+  color: #8881F0;
+}
+
+/* line 1, scss/sections/_privacy.scss */
+.privacy {
+  text-align: center;
+  padding: 20px;
+}
+@media (min-width: 768px) {
+  /* line 1, scss/sections/_privacy.scss */
+  .privacy {
+    padding: 40px;
+  }
+}
+/* line 9, scss/sections/_privacy.scss */
+.privacy a:hover {
+  color: black;
+}
+
+/* line 1, scss/sections/_about.scss */
+.about {
+  padding: 100px 20px;
+  color: #8881F0;
+  background-color: #EEEFF0;
+}
+/* line 6, scss/sections/_about.scss */
+.about li {
+  margin-bottom: 2em;
+}
+@media (min-width: 768px) {
+  /* line 6, scss/sections/_about.scss */
+  .about li {
+    width: 70%;
+    font-size: 2em;
+  }
+}
+
+/* line 1, scss/sections/_page.scss */
+.page {
+  padding: 100px 20px;
+  background-color: white;
+}
+@media (min-width: 768px) {
+  /* line 4, scss/sections/_page.scss */
+  .page__content {
+    width: 75%;
+    margin-left: 12.5%;
+  }
+}
+/* line 11, scss/sections/_page.scss */
+.page h1 {
+  text-align: center;
+  margin-bottom: 1em;
+  color: #8881F0;
+}
+/* line 16, scss/sections/_page.scss */
+.page p {
+  margin-bottom: 1em;
+  line-height: 1.5;
+}

@@ -1,0 +1,43 @@
+.pricing {
+    background-color: $grey;
+
+    color: black;
+    font-size: 20px;
+    
+    @include large {
+        display: flex;
+        font-size: $text-medium;
+    }
+    
+    .pricing__copy {
+        padding: 80px 20px 180px 20px;
+
+        @include large {
+            width: 75%;
+            margin-left: 12.5%;
+        }
+        
+        strong, i {
+            font-style: normal;
+            color: $purple;
+        }
+        
+        p, ul {
+            margin-bottom: 1em;
+        }
+    }
+    
+    
+  
+    &__join {
+        margin: 2em 0;
+        background-color: $purple;
+        border-color: $purple;
+        color: $grey;
+        
+        &:hover {
+            color: $purple;
+        }
+    }
+
+}

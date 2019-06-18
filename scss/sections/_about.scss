@@ -1,0 +1,14 @@
+.about {
+    padding: 100px 20px;
+    color: $purple;
+    background-color: $grey;
+    
+    li {
+        margin-bottom: 2em;
+        
+        @include large {
+            width: 70%;
+            font-size: 2em;
+        }
+    }
+}

@@ -1,0 +1,12 @@
+.privacy {
+    text-align: center;
+    padding: 20px;
+    
+    @include large {
+        padding: 40px;
+    }
+    
+    a:hover {
+        color: black
+    }
+}

@@ -1,0 +1,54 @@
+.butlers {
+    color: $grey;
+    font-size: 25px;
+    line-height: 1.1;
+    min-height: 100vh;
+    
+    @include large {
+        display: flex;
+        font-size: $text-large;
+    }
+    
+    &__left,
+    &__right {
+        padding: 40px 20px 180px 20px;
+        
+        @include large {
+            padding: 40px 40px 180px 40px;
+            width: 50%;  
+        }
+          
+    }
+    
+    &__left {
+        background-color: $purple;
+    }
+    
+    &__right {
+        background-color: $orange;
+        svg {
+            margin-top: 10px;
+            max-width: 30px;
+
+            @include large {
+                max-width: 43px;
+                margin-top: 0;
+            }
+            path {
+                fill: $grey
+            }
+        }
+    }
+    
+    &__copy {
+        color: black;
+        
+        strong {
+            color: white;
+        }
+    }
+    
+    &__heading {
+        margin-bottom: 1em;
+    }
+}

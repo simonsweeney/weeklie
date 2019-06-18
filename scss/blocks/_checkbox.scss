@@ -1,0 +1,9 @@
+.checkbox {
+    .checkbox__w {
+        // opacity: 0;
+        
+        &.ticked {
+            opacity: 1;
+        }
+    }
+}

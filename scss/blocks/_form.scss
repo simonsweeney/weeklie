@@ -1,0 +1,77 @@
+.form {
+    position: fixed;
+    background: $purple;
+    height: 100%;
+    width: 100%;
+    bottom: -100%;
+    opacity: 0;
+    z-index: 100;
+    transition: all 0.4s;
+
+    &.open {
+        bottom: 0;
+        opacity: 1;
+    }
+
+    
+
+    
+    &__container {  
+        background: $grey;
+        padding: 20px;
+        
+        @include large {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50%;
+            margin-left: 25%;
+        }
+        
+        
+    }
+    
+    div {
+        margin-bottom: 1em;
+    }
+    
+    input {
+        width: 100%;
+        font-size: 20px;
+        padding: 10px;
+        @include large {
+            font-size: 20px;
+        }
+    }
+    
+
+    input[type="submit"] {
+        font-size: 20px;
+        padding: 10px;
+        background-color: $purple;
+        border-radius: 0;
+        border: 1px solid $purple;
+        color: $grey;
+        cursor: pointer;
+        @include large {
+            font-size: 20px;
+        }
+        
+        &:hover {
+            background-color: $grey;
+            color: $purple;
+        }
+    }
+    
+    &__close {
+        color: $grey;
+        cursor:pointer;
+        text-align: center;
+        display: block;
+        position: relative;
+        bottom: -4em;
+        &:hover {
+            color: black;
+        }
+    }
+}
